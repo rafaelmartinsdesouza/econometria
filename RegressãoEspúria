@@ -1,0 +1,9 @@
+erro1 = rnorm(100)
+erro2 = rnorm(100)
+y = erro1
+x = erro2
+for (i in 2:100){
+  y[i] = 2 + y[i-1] + erro1[i]
+  x[i] = 1 + x[i-1] + erro2[i]
+}
+summary(lm(y ~ x))
